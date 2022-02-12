@@ -14,23 +14,35 @@ import datetime
 import wikipedia
 import sys
 import os
+import speedtest
 import cv2
-cap=cv2.VideoCapture(0)
+import pyautogui #volume control
+import smtplib
+import alarm
+import psutil #battery percentage
 engine=pyttsx3.init('sapi5')  #sapi5 -api (speech synthesis)(text-speech)
 voices=engine.getProperty('voices')
-#print(voices)
+
 engine.setProperty('voice',voices[2].id)
 engine.setProperty('rate',130)
-recognizer=sr.Recognizer()
+
+def send_mail(to,content):
+    server=smtplib.SMTP('smtp.gmail.com',587)  #Simple mail transfer protocol
+    server.ehlo()  #initiaties the smtp client session
+    server.starttls() #starts a tls handshake for secure session
+    server.login('pizza27015@gmail.com','park@jimin078')
+    server.sendmail('pizza27015@gmail.com',to,content)
+    server.close()
+
+
 def engine_talk(text):
     engine.say(text)
     engine.runAndWait()
-#engine_talk("hello how are you")
 
-def run_alexa():
+def take_command():
+    recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         recognizer.adjust_for_ambient_noise(source,duration=1)
-        print('\n')
         print("Start speaking....")
         print('Listening.....')
         engine_talk("Listening")
@@ -38,6 +50,15 @@ def run_alexa():
     try:
         command=recognizer.recognize_google(audio,language='en-us')
         command=command.lower()
+    except Exception as ex:
+        return None
+    return command
+##########################
+phone_dict={'swati':'+919665812591','father':'+919822557291'}
+email_dict={'bts':'pizza27015@gmail.com','joey':'joey@gmail.com'}
+def run_alexa():
+    try:
+        command=take_command()
         if 'alexa' in command:
             command=command.replace('alexa','')
             print('you said',command)
@@ -190,17 +211,93 @@ def run_alexa():
             print('Opening command prompt...')
             engine_talk('Opening command prompt')
             os.system('start cmd')
-        elif 'open web cam' in command:
+        elif 'open webcam' in command:
             print('Opening web cam...')
             engine_talk('Opening web cam')
+            cap = cv2.VideoCapture(0)
             while True:
                 success,img=cap.read()
                 cv2.imshow('img',img)
-        elif 'close web cam' in command:
-            print('Closing web cam')
-            engine_talk('Closing web cam')
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    break
             cap.release()
-            cap.destroyAllWindows()
+            cv2.destroyAllWindows()
+        elif 'battery' in command or 'battery percentage' in command:
+                battery=psutil.sensors_battery()  #battery info
+                percentage=battery.percent
+                print(f'your system battery is {percentage} percent')
+                engine_talk(f'your system battery is {percentage} percent')
+        elif 'internet speed' in command:
+            st=speedtest.Speedtest()
+            ds=int(st.download())
+            us=int(st.upload())
+            print(f'You have {ds} per second downloading speed and {us} per second uploading speed')
+            engine_talk(f'You have {ds} per second downloading speed and {us} per second uploading speed')
+
+
+        elif 'close notepad' in command:
+            print('Closing notepad')
+            engine_talk('Closing Notepad')
+            os.system('taskkill /f /im notepad.exe')
+        elif 'set alarm' in command:
+            try:
+                print('Tell me the time to set the alarm please , for example set alarm at 2:30 AM')
+                engine_talk('Tell me the time to set the alarm please , for example set alarm at 2:30 AM')
+                timing=take_command()
+                timing=timing.replace('set alarm at ','')
+                timing=timing.replace('.','')
+                timing=timing.upper()
+                print("Setting alarm at",timing)
+                engine_talk("Setting alarm at"+timing)
+                alarm.set_alarm(timing)
+            except Exception as e:
+                print("Sorry error occurred",e)
+                engine_talk("Sorry error occurred")
+
+        elif 'message' in command:
+            try:
+                print('To whom you wish to send a message')
+                engine_talk('To whom you wish to send a message')
+                name=take_command()
+                phone_no=phone_dict[name]
+                engine_talk("Okay and what should i send??")
+                print("Okay and what should i send??")
+                msg=take_command()
+                h=datetime.datetime.now().hour
+                m=datetime.datetime.now().minute
+                pywhatkit.sendwhatmsg(phone_no,msg,h,m+2)
+            except Exception as e:
+                print('Sorry!! i could not place the message due to some error')
+        elif 'send email' in command:
+            try:
+                print('To whom should i send??')
+                engine_talk('To whom should i send?')
+                name = take_command()
+                email=email_dict[name]
+                print(' Okay and what should i say?')
+                engine_talk('Okay and what should i say?')
+                content=take_command()
+                print('Sending email')
+                engine_talk('Sending email')
+                send_mail(email,content)
+                print('Sent email successfully')
+                engine_talk('Sent email successfully')
+            except Exception as e:
+                print('Sorry error occured')
+                engine_talk('Sorry error occured')
+                print(e)
+        elif 'volume up' in command:
+            print('Increasing Volume')
+            engine_talk('Increasing volume')
+            pyautogui.press("volumeup")
+        elif 'volume down' in command:
+            print('Decreasing Volume')
+            engine_talk('Decreasing volume')
+            pyautogui.press("volumedowm")
+        elif 'volume mute' in command:
+            print('Muting Volume')
+            engine_talk('Muting volume')
+            pyautogui.press("volumemute")
         elif 'bye' in command:
             print('Bye, have a nice day!!')
             engine_talk('Bye, have a nice day!!')
@@ -213,22 +310,37 @@ def run_alexa():
             print('Bye, have a nice day!!')
             engine_talk('Bye, have a nice day!!')
             sys.exit()
+        elif 'shutdown' in command:
+            print('Shutting down..')
+            engine_talk('Shutting down')
+            os.system('shutdown /s /t 5')
+        elif 'restart' in command:
+            print('Restarting the system')
+            engine_talk('Restarting the system')
+            os.system('taskkill /r /t 5')
+        elif 'sleep the system' in command:
+            print('Putting the system to sleep')
+            engine_talk('Putting the system to sleep')
+            os.system('rundll32.exe powrprof.dll,SetSuspendState 0,1,0')
         else:
             search='https://www.google.com/search?q='+command
             print('Here is what i found on the internet')
             engine_talk('Here is what i found on the internet')
             wb.get().open(search)
-    except Exception as ex:
-        print(ex)
+    except Exception as e:
+        print('Say that again')
+        engine_talk('Say that again')
 
-print('Clearing background noises....Please wait...')
+
+
+
+"""print('Clearing background noises....Please wait...')
 engine_talk('Clearing background noises....Please wait...')
 print('Hello i am alexa how may i help you')
-engine_talk('Hello i am alexa how may i help you')
+engine_talk('Hello i am alexa how may i help you')"""
 
 while True:
     run_alexa()
-
 
 
 
