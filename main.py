@@ -13,19 +13,35 @@ from datetime import date
 import datetime
 import wikipedia
 import sys
+import requests
+from bs4 import BeautifulSoup
 import os
+import PyPDF2 #pdf reader
 import speedtest
 import cv2
+import operator
 import pyautogui #volume control
 import smtplib
-import alarm
+import alarm #self package
 import psutil #battery percentage
+
 engine=pyttsx3.init('sapi5')  #sapi5 -api (speech synthesis)(text-speech)
 voices=engine.getProperty('voices')
-
 engine.setProperty('voice',voices[2].id)
 engine.setProperty('rate',130)
-
+##########################
+def calculate(query,math_dict):
+    l=query.split(" ")
+    n1=int(l[0])
+    n2=int(l[-1])
+    temp=l[1:-1]
+    print(temp)
+    s=" "
+    s=s.join(temp)
+    oper=math_dict[s]
+    ans=oper(n1,n2)
+    return ans
+##########################
 def send_mail(to,content):
     server=smtplib.SMTP('smtp.gmail.com',587)  #Simple mail transfer protocol
     server.ehlo()  #initiaties the smtp client session
@@ -34,11 +50,12 @@ def send_mail(to,content):
     server.sendmail('pizza27015@gmail.com',to,content)
     server.close()
 
-
+##########################
 def engine_talk(text):
     engine.say(text)
     engine.runAndWait()
 
+##########################
 def take_command():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
@@ -53,9 +70,13 @@ def take_command():
     except Exception as ex:
         return None
     return command
+
 ##########################
 phone_dict={'swati':'+919665812591','father':'+919822557291'}
 email_dict={'bts':'pizza27015@gmail.com','joey':'joey@gmail.com'}
+math_dict={'+':operator.add,'-':operator.sub,'x':operator.mul,'/':operator.truediv,'modulus':operator.mod,'raised to':operator.pow,'raise to':operator.pow,'to the power':operator.pow}
+
+
 def run_alexa():
     try:
         command=take_command()
@@ -113,6 +134,14 @@ def run_alexa():
             info=wikipedia.summary(command,1)
             print(info)
             engine_talk(info)
+        elif 'temperature' in command:
+            city='pune'
+            url='https://www.google.com/search?q=weather'+city
+            info=requests.get(url)
+            html=BeautifulSoup(info.text,'html.parser')
+            temp=html.find('div',attrs={'class':'BNeawe'}).text
+            print('Temperature right now is ',temp)
+            engine_talk(f"Temperature right now is {temp}")
         elif 'what is' in command:
             command = command.replace('what', '')
             info = wikipedia.summary(command, 1)
@@ -207,6 +236,36 @@ def run_alexa():
             engine_talk('Opening notepad')
             loc='C:\\Windows\\System32\\notepad.exe'
             os.startfile(loc)
+        elif 'read pdf' in command:
+            try:
+                book=open('file.pdf','rb')
+                pdf_reader=PyPDF2.PdfFileReader(book)
+                num_pages=pdf_reader.numPages
+                print('The number of pages in the pdf are ',num_pages)
+                engine_talk(f'The number of pages in the pdf are {num_pages}')
+                print('Which page you would want me to read?')
+                engine_talk('Which page you would want me to read?')
+                num=take_command()
+                num=int(num)
+                page=pdf_reader.getPage(num)
+                text=page.extractText()
+                print(text)
+                engine_talk(text)
+            except Exception as e:
+                print('Error occurred')
+                engine_talk('Error occurred')
+        elif 'math' in command or 'calculations' in command:
+            try:
+                print('What calculations do you wish to perform? For example 2+2')
+                engine_talk('What calculations do you wish to perform? For example 2+2')
+                query=take_command()
+                print(query)
+                ans=calculate(query,math_dict)
+                print(query+'is equal to ',ans)
+                engine_talk(f'{query} is equal to {ans}')
+            except Exception as e:
+                print('There was some error with the command')
+                engine_talk('There was some error with the command')
         elif 'open command prompt' in command:
             print('Opening command prompt...')
             engine_talk('Opening command prompt')
@@ -233,8 +292,14 @@ def run_alexa():
             us=int(st.upload())
             print(f'You have {ds} per second downloading speed and {us} per second uploading speed')
             engine_talk(f'You have {ds} per second downloading speed and {us} per second uploading speed')
-
-
+        elif 'change window' in command:
+            import time
+            print('Changing window')
+            engine_talk('Changing window')
+            pyautogui.keyDown('alt')
+            pyautogui.press('tab')
+            time.sleep(1)
+            pyautogui.keyUp('alt')
         elif 'close notepad' in command:
             print('Closing notepad')
             engine_talk('Closing Notepad')
@@ -334,10 +399,10 @@ def run_alexa():
 
 
 
-"""print('Clearing background noises....Please wait...')
+print('Clearing background noises....Please wait...')
 engine_talk('Clearing background noises....Please wait...')
 print('Hello i am alexa how may i help you')
-engine_talk('Hello i am alexa how may i help you')"""
+engine_talk('Hello i am alexa how may i help you')
 
 while True:
     run_alexa()
