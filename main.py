@@ -72,7 +72,7 @@ def take_command():
     return command
 
 ##########################
-phone_dict={'swati':'+919665812591','father':'+919822557291'}
+phone_dict={'mother':'+919456658125','father':'+919123537291'}
 email_dict={'bts':'pizza27015@gmail.com','joey':'joey@gmail.com'}
 math_dict={'+':operator.add,'-':operator.sub,'x':operator.mul,'/':operator.truediv,'modulus':operator.mod,'raised to':operator.pow,'raise to':operator.pow,'to the power':operator.pow}
 

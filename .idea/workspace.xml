@@ -2,75 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f412243-7466-416f-8558-5879e3cd8924" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/file.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2-1.26.0-py3.7.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2-1.26.0-py3.7.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2-1.26.0-py3.7.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2-1.26.0-py3.7.egg-info/installed-files.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2-1.26.0-py3.7.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/_version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/generic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/merger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/pagerange.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/pdf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyPDF2/xmp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/bs4-0.0.1-py3.7.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/bs4-0.0.1-py3.7.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/bs4-0.0.1-py3.7.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/bs4-0.0.1-py3.7.egg-info/installed-files.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/bs4-0.0.1-py3.7.egg-info/requires.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/bs4-0.0.1-py3.7.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil-5.9.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil-5.9.0.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil-5.9.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil-5.9.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil-5.9.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil-5.9.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_psaix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_psbsd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_pslinux.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_psosx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_psposix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_pssunos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_psutil_windows.cp37-win_amd64.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/_pswindows.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/runner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_aix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_bsd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_connections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_contracts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_linux.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_memleaks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_misc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_osx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_posix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_process.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_sunos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_system.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_testutils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_unicode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/psutil/tests/test_windows.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest_cli-2.1.3.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest_cli-2.1.3.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest_cli-2.1.3.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest_cli-2.1.3.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest_cli-2.1.3.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest_cli-2.1.3.dist-info/entry_points.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest_cli-2.1.3.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/speedtest_cli.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/speedtest-cli.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/speedtest.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aa.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +41,7 @@
       <recent name="C:\Users\ishad\PycharmProjects\mini-alexa\venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Python">
+  <component name="RunManager" selected="Python.alarm (1)">
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
@@ -126,6 +58,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="alarm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mini-alexa" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/alarm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,9 +134,11 @@
       <item itemvalue="Python.Python" />
       <item itemvalue="Python.alarm" />
       <item itemvalue="Python.trial" />
+      <item itemvalue="Python.alarm (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.alarm (1)" />
         <item itemvalue="Python.trial" />
         <item itemvalue="Python.alarm" />
       </list>
@@ -219,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1644663598582</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changes">
+      <created>1644695549851</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644695549851</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changes">
+      <created>1644695626705</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644695626705</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -232,10 +201,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1644434420011" />
-    <state x="309" y="0" key="CommitChangelistDialog2" timestamp="1644695549145">
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1644695763882">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="309" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1644695549145" />
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1644695763882" />
+    <state x="309" y="0" key="CommitChangelistDialog2" timestamp="1644695720629">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="309" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1644695720629" />
     <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1644695421502">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -244,30 +217,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="521" y="240" width="259" height="200" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1644695455645" />
-    <state width="1259" height="381" key="GridCell.Tab.0.bottom" timestamp="1644673716358">
+    <state width="1259" height="381" key="GridCell.Tab.0.bottom" timestamp="1644695690988">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="381" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1644673716358" />
-    <state width="1259" height="381" key="GridCell.Tab.0.center" timestamp="1644673716358">
+    <state width="1259" height="381" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1644695690988" />
+    <state width="1259" height="381" key="GridCell.Tab.0.center" timestamp="1644695690988">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="381" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1644673716358" />
-    <state width="1259" height="381" key="GridCell.Tab.0.left" timestamp="1644673716358">
+    <state width="1259" height="381" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1644695690988" />
+    <state width="1259" height="381" key="GridCell.Tab.0.left" timestamp="1644695690987">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="381" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1644673716358" />
-    <state width="1259" height="381" key="GridCell.Tab.0.right" timestamp="1644673716358">
+    <state width="1259" height="381" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1644695690987" />
+    <state width="1259" height="381" key="GridCell.Tab.0.right" timestamp="1644695690988">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="381" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1644673716358" />
+    <state width="1259" height="381" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1644695690988" />
     <state x="144" y="0" key="SettingsEditor" timestamp="1644695414279">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1644695414279" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1644695585642">
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1644695676905">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1644695585642" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1644695676905" />
     <state x="349" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1644695374285">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
