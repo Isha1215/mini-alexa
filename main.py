@@ -35,7 +35,6 @@ def calculate(query,math_dict):
     n1=int(l[0])
     n2=int(l[-1])
     temp=l[1:-1]
-    print(temp)
     s=" "
     s=s.join(temp)
     oper=math_dict[s]
@@ -261,8 +260,8 @@ def run_alexa():
                 query=take_command()
                 print(query)
                 ans=calculate(query,math_dict)
-                print(query+'is equal to ',ans)
-                engine_talk(f'{query} is equal to {ans}')
+                print('The ans is ',ans)
+                engine_talk(f'The ans is {ans}')
             except Exception as e:
                 print('There was some error with the command')
                 engine_talk('There was some error with the command')
