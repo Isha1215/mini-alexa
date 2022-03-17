@@ -7,3 +7,25 @@ Languge used : Python
 
 ###############
 Functions peformed
+
+--Mathematical calculations
+
+--Sending email
+
+--Current Date and Time
+
+--Finding your location
+
+--Search the internet
+
+--Opening different applications
+
+--Set alaram
+
+--Send a Whatsapp text
+
+--Battery Status
+
+--Control Volume
+
+and many more
