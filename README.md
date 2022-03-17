@@ -5,7 +5,7 @@ This project intends at creating a program which will perform functions similar 
 
 Languge used : Python
 
-###############
+
 Functions peformed
 
 --Mathematical calculations
@@ -28,4 +28,3 @@ Functions peformed
 
 --Control Volume
 
-and many more
